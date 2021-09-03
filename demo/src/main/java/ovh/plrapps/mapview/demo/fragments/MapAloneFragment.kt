@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.fragment.app.Fragment
 import ovh.plrapps.mapview.MapView
 import ovh.plrapps.mapview.MapViewConfiguration
@@ -50,5 +51,11 @@ class MapAloneFragment : Fragment() {
         ).setMaxScale(2f)
 
         mapView.configure(config)
+
+        val button = view.findViewById<Button>(R.id.scrollto_button)
+        button.setOnClickListener{
+            mapView.scrollToAndCenter(4096, 4096)
+        }
+
     }
 }
