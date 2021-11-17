@@ -1,6 +1,6 @@
 package ovh.plrapps.mapview.core
 
-import java.io.InputStream
+import android.graphics.Bitmap
 
 /**
  * The tile provider is user-provided to the MapView. It must be supplied as part of the configuration
@@ -13,5 +13,5 @@ import java.io.InputStream
  * If [getTileStream] returns null, the tile is simply ignored by the tile processing machinery.
  */
 fun interface TileStreamProvider {
-    fun getTileStream(row: Int, col: Int, zoomLvl: Int): InputStream?
+    fun getTileStream(row: Int, col: Int, zoomLvl: Int): Bitmap?
 }
