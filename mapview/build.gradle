@@ -75,7 +75,7 @@ afterEvaluate { project ->
                 artifactId = 'mapview'
                 version = VERSION_NAME
 
-                artifact bundleReleaseAar
+                from components.findByName('release')
                 artifact androidSourcesJar
 
                 pom {
